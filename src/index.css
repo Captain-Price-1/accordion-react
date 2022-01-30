@@ -1,13 +1,138 @@
+:root {
+  --clr-grey-special: #eae6eb;
+  --clr-red-special: #b4345c;
+  --clr-grey-special: #eae6eb;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  background: url("https://storage.pixteller.com/designs/designs-images/2019-03-27/05/simple-background-backgrounds-passion-simple-1-5c9b95d09002a.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* background: #453ac5; */
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.alert-enter {
+  opacity: 0;
+  /* transform: scale(0.9); */
+}
+.alert-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+.alert-exit {
+  opacity: 1;
+}
+.alert-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}
+.App {
+  margin-left: 3rem;
+  margin-right: 3rem;
+  margin-top: 5rem;
+  /* max-height: 600px; */
+  /* height: 100%; */
+  height: 30rem;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 0 5px 0;
+  background: transparent;
+  backdrop-filter: blur(10px);
+  transition: all 0.5s ease;
+}
+.active {
+  height: 25rem;
+}
+.information {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-right: 3rem;
+  margin-left: 3rem;
+  /* background: blue; */
+}
+.ques-div h1 {
+  font-size: 1rem;
+}
+.ques-div {
+  /* min-width: 40rem; */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  margin: 0.3rem;
+  padding: 0.5rem;
+  box-shadow: 0 0 5px 0;
+  background: transparent;
+  backdrop-filter: blur(10px);
+}
+article {
+  /* position: fixed; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* justify-content: center; */
+}
+article button {
+  height: 1.3rem;
+  background-color: rgb(255, 245, 155);
+  border-style: none;
+}
+p {
+  width: 90%;
+}
+.containing-all {
+  padding: 1rem;
+  /* background: blue; */
+  /* min-height: 100vh; */
+  width: 100%;
+
+  /* position: relative; */
+  /* top: 10rem; */
+
+  /* max-width: 50%; */
+}
+
+.btn {
+  background: transparent;
+  border-color: transparent;
+  width: 2rem;
+  height: 2rem;
+  background: var(--clr-grey-special);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--clr-red-special);
+  cursor: pointer;
+  margin-left: 1rem;
+  align-self: center;
+  min-width: 2rem;
+}
+@media screen and (max-width: 877px) {
+  .App {
+    flex-wrap: wrap;
+    /* height: 100%; */
+    margin-bottom: 1rem;
+  }
+  .ques-div {
+    flex-wrap: wrap;
+  }
+  .App {
+    height: 55rem;
+  }
+  .active {
+    height: 45rem;
+  }
 }
